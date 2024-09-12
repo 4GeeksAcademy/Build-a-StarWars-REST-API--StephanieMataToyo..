@@ -208,7 +208,7 @@ def update_a_vehicles(id):
     return jsonify(vehicles.serialize())
 
 @api.route('/vehicles/<int:id>', methods=['DELETE'])
-def delete_a_planets(id):
+def delete_a_vehicles(id):
     vehicles = Vehicles.query.get_or_404(id)
     db.session.delete(vehicles)
     db.session.commit()

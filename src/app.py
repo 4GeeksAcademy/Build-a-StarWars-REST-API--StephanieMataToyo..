@@ -27,7 +27,7 @@ db.init_app(app)
 CORS(app)
 setup_admin(app)
 
-app.register_Flask(api, url_prefix='/api')
+app.register_blueprint(api, url_prefix='/api')
 
 # Handle/serialize errors like a JSON object
 @app.errorhandler(APIException)
