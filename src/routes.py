@@ -138,7 +138,7 @@ def add_planets():
     planets = Planets(name=rb["name"], Terrain=rb["Terrain"], population=rb["population"])
     db.session.add(planets)
     db.session.commit()
-    return f"Favourites {rb['user_id']} was added to our data base", 200
+    return f"Favourites {rb['name']} was added to our data base", 200
 
 @api.route('/planets' , methods=['GET'])
 def get_all_planets():
@@ -179,7 +179,7 @@ def add_vehicles():
     vehicles = Vehicles(name=rb["name"], model=rb["model"], Cost_in_Credits=rb["Cost_in_Credits"], Crew=rb["Crew"])
     db.session.add(vehicles)
     db.session.commit()
-    return f"Vehicles {rb['user_id']} was added to our data base", 200
+    return f"Vehicles {rb['name']} was added to our data base", 200
 
 @api.route('/vehicles' , methods=['GET'])
 def get_all_vehicles():

@@ -8,7 +8,7 @@ from flask_swagger import swagger
 from flask_cors import CORS
 from utils import APIException, generate_sitemap
 from admin import setup_admin
-from models import db, User
+from models import db, User, Characters, Favourites, Planets, Vehicles
 from routes import api
 #from models import Person
 
@@ -27,7 +27,7 @@ db.init_app(app)
 CORS(app)
 setup_admin(app)
 
-app.register_blueprint(api, url_prefix='/api')
+app.register_Flask(api, url_prefix='/api')
 
 # Handle/serialize errors like a JSON object
 @app.errorhandler(APIException)
